@@ -1,0 +1,16 @@
+.img {
+    width: 100px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    border-bottom: 1px solid #000;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 5px;
+}

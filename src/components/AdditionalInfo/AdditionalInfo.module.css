@@ -1,0 +1,12 @@
+.title {
+    font-size: 22px;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    padding: 5px;
+    box-shadow: 0px 4px 11px 0px rgba(145, 140, 140, 0.81);
+}
