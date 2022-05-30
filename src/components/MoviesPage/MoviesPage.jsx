@@ -18,7 +18,7 @@ const MoviesPage = ({ films, onSetHistory }) => {
 
                 return (
                     <li className={s.item} key={id}>
-                        <Link to={`/Movies/${id}`}>{title}</Link>
+                        <Link to={`/movies/${id}`}>{title}</Link>
                     </li>
                 );
             })}

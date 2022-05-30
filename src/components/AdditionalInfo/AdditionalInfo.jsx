@@ -9,10 +9,10 @@ const AdditionalInfo = () => {
             <h2 className={s.title}>Additional information</h2>
             <ul>
                 <li className={s.item}>
-                    <Link to={`/Movies/${filmId}/cast`}>cast</Link>
+                    <Link to={`/movies/${filmId}/cast`}>cast</Link>
                 </li>
                 <li className={s.item}>
-                    <Link to={`/Movies/${filmId}/review`}>reviews</Link>
+                    <Link to={`/movies/${filmId}/review`}>reviews</Link>
                 </li>
             </ul>
         </div>

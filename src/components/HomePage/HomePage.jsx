@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createBrowserHistory } from 'history';
 import { Link } from 'react-router-dom';
-import getFilms from '../films-api';
+import getFilms from '../../services/films-api';
 import s from './HomePage.module.css';
 
 const HomePage = ({ onSetHistory }) => {
@@ -26,7 +26,7 @@ const HomePage = ({ onSetHistory }) => {
 
                     return (
                         <li className={s.item} key={id}>
-                            <Link to={`/Movies/${id}`}>{title}</Link>
+                            <Link to={`/movies/${id}`}>{title}</Link>
                         </li>
                     );
                 })}

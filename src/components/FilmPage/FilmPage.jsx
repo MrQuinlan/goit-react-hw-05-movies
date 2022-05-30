@@ -1,6 +1,6 @@
 import { Link, useParams, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import getFilms from '../films-api';
+import getFilms from '../../services/films-api';
 import AdditionalInfo from '../AdditionalInfo';
 import s from './FilmPage.module.css';
 

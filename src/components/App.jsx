@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Container from './Container';
 import NavBar from './NavBar';
 
-import getFilms from './films-api';
+import getFilms from '../services/films-api';
 // import HomePage from './HomePage';
 // import SearchBar from './SearchBar';
 // import MoviesPage from './MoviesPage';
@@ -58,7 +58,7 @@ export const App = () => {
     }
 
     function onSubmit(val) {
-        if (val === '') {
+        if (!val) {
             return;
         }
 
@@ -81,7 +81,7 @@ export const App = () => {
                         element={<HomePage onSetHistory={onSetHistory} />}
                     />
                     <Route
-                        path="/Movies"
+                        path="/movies"
                         element={<SearchBar onSubmit={onSubmit} />}
                     >
                         <Route
@@ -96,12 +96,12 @@ export const App = () => {
                     </Route>
 
                     <Route
-                        path="/Movies/:filmId"
+                        path="/movies/:filmId"
                         element={<FilmPage historyLocation={historyLocation} />}
                     >
-                        <Route path="/Movies/:filmId/cast" element={<Cast />} />
+                        <Route path="/movies/:filmId/cast" element={<Cast />} />
                         <Route
-                            path="/Movies/:filmId/review"
+                            path="/movies/:filmId/review"
                             element={<Reviews />}
                         />
                     </Route>

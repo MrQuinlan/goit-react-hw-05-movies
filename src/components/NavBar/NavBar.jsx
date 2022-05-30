@@ -12,7 +12,7 @@ const NavBar = () => {
             </NavLink>
             <NavLink
                 className={({ isActive }) => (isActive ? s.active : s.link)}
-                to="/Movies"
+                to="/movies"
             >
                 Movies
             </NavLink>
