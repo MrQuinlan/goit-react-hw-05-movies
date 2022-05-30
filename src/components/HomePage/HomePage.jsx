@@ -14,6 +14,7 @@ const HomePage = ({ onSetHistory }) => {
             setFilms(res.results);
             onSetHistory(historyLocation);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

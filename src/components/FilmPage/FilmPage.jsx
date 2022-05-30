@@ -7,7 +7,6 @@ import s from './FilmPage.module.css';
 const FilmPage = ({ historyLocation }) => {
     const [film, setFilm] = useState({});
     const [poster, setPoster] = useState([]);
-
     const [genres, setGenres] = useState([]);
     const [date, setDate] = useState('');
 
@@ -20,6 +19,7 @@ const FilmPage = ({ historyLocation }) => {
             setGenres(res.genres);
             setDate(res.release_date.slice(0, 4));
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const { title, overview, vote_average } = film;
@@ -41,10 +41,10 @@ const FilmPage = ({ historyLocation }) => {
                         </h1>
                     </li>
 
-                    <li>Raiting: {vote_average}</li>
+                    <li>Rating: {vote_average}</li>
 
                     <li>
-                        <h2 className={s.title}>Overwiev</h2>
+                        <h2 className={s.title}>Overview</h2>
                         {overview}
                     </li>
 

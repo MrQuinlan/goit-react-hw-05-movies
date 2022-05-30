@@ -8,6 +8,7 @@ const MoviesPage = ({ films, onSetHistory }) => {
 
     useEffect(() => {
         onSetHistory(historyLocation);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

@@ -12,6 +12,7 @@ const Cast = () => {
         getFilms(`movie/${filmId}/credits`).then(res => {
             setCast(res.cast);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
